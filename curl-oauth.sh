@@ -1,0 +1,2 @@
+export PYTHONIOENCODING=utf8
+curl https://mydomainname.my.salesforce.com/services/oauth2/token -d "grant_type=password" -d "client_id=3MVG9GXbtnGKjXe4AcGEL9XuD.gMAs0vYc02DuV.OBH9npr9iZwpRoq5nfoHNpE2XQsrxpI9kPVXusyjVnqg4" -d "client_secret=607CA84E32321C2C0E7D1D0F76C56DD009E334F9858600D733915FC2E81427E8"  -d "username=salesforce_username" -d "password=password+SecurityToken" | python -c "import sys, json; print json.load(sys.stdin)['access_token']"
